@@ -14,7 +14,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  -webkit-tap-highlight-color: none;
+
   user-select: none;
   .logoholder img {
     position: relative;
@@ -79,7 +79,7 @@ nav {
     font-size: 1.1rem;
     font-weight: 500;
     padding: 0;
-
+    -webkit-tap-highlight-color: transparent;
     width: 100%;
     top: 3rem;
     text-align: center;
