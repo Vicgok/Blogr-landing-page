@@ -1,0 +1,43 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  background-color: $footer-background;
+  height: 100vh;
+
+  margin-top: 4rem;
+  border-top-right-radius: 100px;
+  .logoholder img {
+    width: 5rem;
+  }
+  .footerLink {
+    margin-top: 5rem;
+
+    a {
+      color: $footer-text;
+    }
+  }
+  .footerLinkItem {
+    > a {
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+    &:not(:first-of-type) {
+      margin-top: 3.125rem;
+    }
+  }
+
+  .footerSubLinkItem {
+    margin-top: 2.5rem;
+    li:not(:last-of-type) {
+      margin-bottom: 0.8rem;
+    }
+
+    a:hover {
+      font-weight: 500;
+    }
+  }
+}

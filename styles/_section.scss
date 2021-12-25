@@ -1,0 +1,83 @@
+section {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  padding: 0 10vw;
+  padding-top: 6.234rem;
+  overflow: hidden;
+  h2,
+  h3 {
+    font-size: clamp(1.3rem, 7vw, 2.625rem);
+    font-weight: 500;
+  }
+
+  picture img {
+    margin-top: 21.3vw;
+    margin-bottom: 8.5vw;
+
+    transform: scale(1.4);
+  }
+
+  h3 {
+    margin-top: 12.8vw;
+  }
+
+  .section-description {
+    margin: 5.8vw 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    color: $body-copy;
+    opacity: 0.8;
+    line-height: 1.6;
+  }
+
+  &.secondSection {
+    position: relative;
+    margin-top: 72.5vw;
+    background: url(../images/bg-pattern-circles.svg) no-repeat -40vw -66.6vw /
+        173%,
+      linear-gradient(180deg, $body-gradient-1, $body-gradient-2) no-repeat 0 0 /
+        auto;
+
+    padding-top: 60.8vw;
+    padding-bottom: 31.2vw;
+
+    border-radius: 0 100px 0 100px;
+    overflow: visible;
+
+    picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      img {
+        margin: 0;
+        margin-top: -49vw;
+        transform: scale(1);
+      }
+    }
+    h3,
+    p {
+      margin: 0;
+      color: $text-white;
+    }
+
+    h3 {
+      font-family: 'Overpass', sans-serif;
+      font-weight: 600;
+      font-size: 2.625rem;
+    }
+    .section-description {
+      margin-top: 1rem;
+    }
+  }
+
+  &.thirdSection {
+    picture img {
+      margin: unset;
+    }
+  }
+}

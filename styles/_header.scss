@@ -1,0 +1,237 @@
+header {
+  padding: 3.375rem 1.5rem;
+  padding-bottom: unset;
+  background: url(../images/bg-pattern-intro-mobile.svg) no-repeat 36% 33%,
+    linear-gradient(180deg, $intro-CTA-gradient-1, $intro-CTA-gradient-2);
+  height: 37.5rem;
+
+  border-bottom-left-radius: 6.25rem;
+}
+
+nav {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  user-select: none;
+  .logoholder img {
+    position: relative;
+    height: 2rem;
+  }
+
+  .menubtn {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    width: 2rem;
+    height: 1.125rem;
+
+    // border: 1px solid black;
+
+    .hamburger {
+      width: 2rem;
+      height: 0.125rem;
+      background-color: $text-white;
+      transition: all 0.3s ease;
+      //   transform: translateX(-50px);
+      //   &.open {
+      //     transform: translateX(-50px);
+      //   }
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        left: 0;
+        width: 2rem;
+        height: 0.125rem;
+        background-color: $text-white;
+        transition: all 0.3s ease;
+        // transform: rotate(45deg) translate(35px, -35px);
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+    }
+
+    &.open {
+      .hamburger {
+        transform: translateX(-50px);
+        background-color: transparent;
+
+        &::before {
+          transform: rotate(-45deg) translate(35px, 35px);
+        }
+
+        &::after {
+          transform: rotate(45deg) translate(35px, -35px);
+        }
+      }
+    }
+  }
+  .navlinkswrapper {
+    position: absolute;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0;
+
+    width: 100%;
+    top: 3rem;
+    text-align: center;
+    border-radius: 5px;
+    color: $headings;
+    background-color: $text-white;
+
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.2);
+    max-height: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+
+    cursor: pointer;
+
+    .navlinkslist {
+      svg path {
+        fill: none;
+        stroke-width: 2;
+        stroke: hsl(355, 100%, 74%);
+      }
+
+      .navlinkitem:not(:first-of-type) {
+        margin-top: 2rem;
+      }
+
+      .navsublinkswrapper {
+        border-radius: 5px;
+        padding: 0;
+        background-color: hsl(240, 7%, 94);
+        font-size: 1rem;
+        color: $body-copy;
+        max-height: 0;
+        margin-top: 0;
+
+        transition: all 0.3s ease;
+        overflow: hidden;
+        li:not(:first-of-type) {
+          margin-top: 1.75rem;
+        }
+
+        a:hover {
+          font-weight: 700;
+        }
+      }
+
+      .navlinkitem {
+        > a:hover {
+          color: $intro-CTA-gradient-1;
+        }
+        &.open {
+          svg {
+            transform: rotate(180deg);
+          }
+          .navsublinkswrapper {
+            margin-top: 1.5rem;
+
+            padding: 1.75rem 0;
+            max-height: 17rem;
+          }
+        }
+      }
+    }
+
+    .ctanavbtn {
+      margin-top: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid $footer-text;
+      a:first-of-type {
+        color: $headings;
+        &:hover {
+          color: $CTA-hover-background;
+        }
+      }
+      a:last-of-type {
+        padding: 1rem 2.5rem;
+
+        border-radius: 50px;
+        background: linear-gradient(
+          120deg,
+          $intro-CTA-gradient-1,
+          $intro-CTA-gradient-2
+        );
+        color: $text-white;
+        margin-top: 1.25rem;
+
+        &:hover {
+          background: $CTA-hover-background;
+          box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+
+    &.open {
+      padding: 2rem 1.375rem;
+      max-height: 100rem;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.header-content {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+
+  text-align: center;
+  h1 {
+    margin-top: 7rem;
+    font-size: clamp(1.6rem, 9.6vw, 4.125rem);
+    color: $text-white;
+  }
+
+  p {
+    margin-top: 1.188rem;
+    color: $text-white;
+    opacity: 0.8;
+  }
+
+  .cta-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.125rem;
+    a {
+      font-weight: 600;
+      padding: 0.7rem 1rem;
+      border-radius: 50px;
+
+      transition: all 0.3s ease;
+
+      &:first-of-type {
+        color: $CTA-text;
+        background-color: $text-white;
+      }
+
+      &:last-of-type {
+        color: $text-white;
+        outline: 1px solid $text-white;
+      }
+
+      ~ a {
+        margin-left: 1rem;
+      }
+
+      &:hover {
+        color: $text-white;
+        background-color: $CTA-hover-background;
+        box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+        outline: none;
+      }
+    }
+  }
+}
