@@ -79,7 +79,7 @@ nav {
     font-size: 1.1rem;
     font-weight: 500;
     padding: 0;
-    -webkit-tap-highlight-color: transparent;
+
     width: 100%;
     top: 3rem;
     text-align: center;
@@ -87,7 +87,7 @@ nav {
     color: $headings;
     background-color: $text-white;
 
-    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0;
     max-height: 0;
     transition: all 0.3s ease;
     overflow: hidden;
@@ -179,6 +179,7 @@ nav {
     &.open {
       padding: 2rem 1.375rem;
       max-height: 100rem;
+      box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease;
     }
   }
@@ -232,6 +233,105 @@ nav {
         box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
         outline: none;
       }
+    }
+  }
+}
+
+@media (min-width: 75em) {
+  header {
+    padding: 3.75rem 10rem;
+    background: url(../images/bg-pattern-intro-desktop.svg) no-repeat -27.7vw/200%,
+      linear-gradient(90deg, $intro-CTA-gradient-1, $intro-CTA-gradient-2);
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+
+    .menubtn {
+      display: none;
+    }
+
+    .navlinkswrapper {
+      position: unset;
+      text-align: unset;
+      overflow: unset;
+      max-height: unset;
+      background-color: unset;
+
+      display: flex;
+      justify-content: space-between;
+      margin-left: 4rem;
+      color: $text-white;
+
+      .navlinkslist {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        svg path {
+          fill: none;
+          stroke-width: 2;
+          stroke: hsl(0, 0%, 100%);
+        }
+        .navlinkitem:not(:first-of-type) {
+          margin-top: unset;
+          margin-left: 1.75rem;
+        }
+
+        .navsublinkswrapper {
+          position: absolute;
+          background-color: $text-white;
+
+          width: 10.5rem;
+        }
+
+        .navlinkitem {
+          > a:hover {
+            color: unset;
+            text-decoration: underline;
+          }
+          &.open {
+            .navsublinkswrapper {
+              padding: 2.125rem 1.5rem;
+            }
+          }
+        }
+      }
+
+      .ctanavbtn {
+        // display: none;
+        margin: unset;
+        padding: unset;
+        border-top: unset;
+
+        flex-direction: row;
+        a {
+          &:first-of-type {
+            color: $text-white;
+            &:hover {
+              color: unset;
+              text-decoration: underline;
+            }
+          }
+
+          &:last-of-type {
+            margin-top: unset;
+            color: $CTA-text;
+            background: $text-white;
+            margin-left: 1.875rem;
+            &:hover {
+              color: $text-white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header-content {
+    p {
+      font-size: 1.35rem;
     }
   }
 }

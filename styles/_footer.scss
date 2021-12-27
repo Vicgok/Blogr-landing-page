@@ -41,3 +41,31 @@ footer {
     }
   }
 }
+
+@media (min-width: 50em) {
+  footer {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    padding: 5rem 0;
+    padding-left: 10rem;
+
+    margin-top: 15rem;
+    .footerLink {
+      width: 100%;
+      margin-top: unset;
+
+      > ul {
+        display: flex;
+
+        justify-content: space-evenly;
+      }
+    }
+
+    .footerLinkItem {
+      &:not(:first-of-type) {
+        margin-top: unset;
+      }
+    }
+  }
+}

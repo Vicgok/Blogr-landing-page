@@ -23,9 +23,16 @@ html {
 body {
   font-family: 'Overpass', sans-serif;
   font-family: 'Ubuntu', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+
+  overflow-x: hidden;
 }
 
-a {
+a,
+a:visited,
+a:hover,
+a:active {
+  color: unset;
   text-decoration: none;
   cursor: pointer;
 }
@@ -36,9 +43,11 @@ ul {
 
 img {
   width: 100%;
+  pointer-events: none;
 }
 h1,
 h2,
 h3 {
   color: $headings;
+  z-index: 1;
 }

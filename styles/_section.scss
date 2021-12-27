@@ -7,9 +7,12 @@ section {
   padding: 0 10vw;
   padding-top: 6.234rem;
   overflow: hidden;
-  h2,
+  h2 {
+    font-size: clamp(1.3rem, 7vw, 2.2rem);
+    font-weight: 500;
+  }
   h3 {
-    font-size: clamp(1.3rem, 7vw, 2.625rem);
+    font-size: clamp(1.3rem, 7vw, 1.625rem);
     font-weight: 500;
   }
 
@@ -21,11 +24,11 @@ section {
   }
 
   h3 {
-    margin-top: 12.8vw;
+    margin-top: 3rem;
   }
 
   .section-description {
-    margin: 5.8vw 0;
+    margin: 1.35rem 0;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400;
     color: $body-copy;
@@ -78,6 +81,99 @@ section {
   &.thirdSection {
     picture img {
       margin: unset;
+    }
+  }
+}
+
+@media (min-width: 50em) {
+  section {
+    padding-top: 10rem;
+
+    overflow: visible;
+    h2 {
+      margin-bottom: 4.375rem;
+    }
+
+    h3 {
+      margin-top: 5.25rem;
+    }
+    .section-body {
+      text-align: left;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      column-gap: 7.68rem;
+      padding-left: 0;
+    }
+    .section-description {
+      margin-top: 2.188rem;
+      max-width: 32.5rem;
+    }
+    &.firstSection {
+      padding-right: 0;
+      picture {
+        order: 2;
+
+        img {
+          margin: 0;
+          transform: scale(1.4) translate(100px, -10px);
+        }
+      }
+    }
+
+    &.secondSection {
+      position: relative;
+      margin-top: 10vw;
+      margin-bottom: 3vw;
+      padding-top: unset;
+      padding-bottom: unset;
+
+      padding: 7.9vw 12.5vw;
+      background: url(../images/bg-pattern-circles.svg) no-repeat -16vw -37.5vw /
+          75%,
+        linear-gradient($body-gradient-1, $body-gradient-2) no-repeat 0 0 / auto;
+
+      .section-body {
+        // position: relative;
+        column-gap: 96px;
+
+        grid-template-columns: 1fr 36vw;
+      }
+      picture {
+        // position: unset;
+        // display: none;
+        top: -3.47vw;
+        left: 11vw;
+        bottom: 0;
+        width: fit-content;
+        order: 1;
+        img {
+          display: block;
+          margin-top: unset;
+          transform: unset;
+          width: 34.7vw;
+        }
+      }
+
+      .section-text {
+        grid-area: 1/ 2/ 2/ 3;
+      }
+
+      h3 {
+        font-size: 2.2rem;
+      }
+    }
+
+    &.thirdSection {
+      padding-left: 0;
+      picture {
+        order: unset;
+
+        img {
+          margin: 0;
+          transform: scale(1.45) translate(-75px, 20px);
+        }
+      }
     }
   }
 }

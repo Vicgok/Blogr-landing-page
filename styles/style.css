@@ -91,15 +91,14 @@ nav .navlinkswrapper {
   font-size: 1.1rem;
   font-weight: 500;
   padding: 0;
-  -webkit-tap-highlight-color: transparent;
   width: 100%;
   top: 3rem;
   text-align: center;
   border-radius: 5px;
   color: #1f3f5b;
   background-color: white;
-  -webkit-box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
   max-height: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -195,6 +194,8 @@ nav .navlinkswrapper .ctanavbtn a:last-of-type:hover {
 nav .navlinkswrapper.open {
   padding: 2rem 1.375rem;
   max-height: 100rem;
+  -webkit-box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -257,6 +258,98 @@ nav .navlinkswrapper.open {
   outline: none;
 }
 
+@media (min-width: 75em) {
+  header {
+    padding: 3.75rem 10rem;
+    background: url(../images/bg-pattern-intro-desktop.svg) no-repeat -27.7vw/200%, -webkit-gradient(linear, left top, right top, from(#ff8f70), to(#ff3d54));
+    background: url(../images/bg-pattern-intro-desktop.svg) no-repeat -27.7vw/200%, linear-gradient(90deg, #ff8f70, #ff3d54);
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  nav .menubtn {
+    display: none;
+  }
+  nav .navlinkswrapper {
+    position: unset;
+    text-align: unset;
+    overflow: unset;
+    max-height: unset;
+    background-color: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-left: 4rem;
+    color: white;
+  }
+  nav .navlinkswrapper .navlinkslist {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .navlinkswrapper .navlinkslist svg path {
+    fill: none;
+    stroke-width: 2;
+    stroke: white;
+  }
+  nav .navlinkswrapper .navlinkslist .navlinkitem:not(:first-of-type) {
+    margin-top: unset;
+    margin-left: 1.75rem;
+  }
+  nav .navlinkswrapper .navlinkslist .navsublinkswrapper {
+    position: absolute;
+    background-color: white;
+    width: 10.5rem;
+  }
+  nav .navlinkswrapper .navlinkslist .navlinkitem > a:hover {
+    color: unset;
+    text-decoration: underline;
+  }
+  nav .navlinkswrapper .navlinkslist .navlinkitem.open .navsublinkswrapper {
+    padding: 2.125rem 1.5rem;
+  }
+  nav .navlinkswrapper .ctanavbtn {
+    margin: unset;
+    padding: unset;
+    border-top: unset;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  nav .navlinkswrapper .ctanavbtn a:first-of-type {
+    color: white;
+  }
+  nav .navlinkswrapper .ctanavbtn a:first-of-type:hover {
+    color: unset;
+    text-decoration: underline;
+  }
+  nav .navlinkswrapper .ctanavbtn a:last-of-type {
+    margin-top: unset;
+    color: #ff525d;
+    background: white;
+    margin-left: 1.875rem;
+  }
+  nav .navlinkswrapper .ctanavbtn a:last-of-type:hover {
+    color: white;
+  }
+  .header-content p {
+    font-size: 1.35rem;
+  }
+}
+
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -271,9 +364,13 @@ section {
   overflow: hidden;
 }
 
-section h2,
+section h2 {
+  font-size: clamp(1.3rem, 7vw, 2.2rem);
+  font-weight: 500;
+}
+
 section h3 {
-  font-size: clamp(1.3rem, 7vw, 2.625rem);
+  font-size: clamp(1.3rem, 7vw, 1.625rem);
   font-weight: 500;
 }
 
@@ -285,11 +382,11 @@ section picture img {
 }
 
 section h3 {
-  margin-top: 12.8vw;
+  margin-top: 3rem;
 }
 
 section .section-description {
-  margin: 5.8vw 0;
+  margin: 1.35rem 0;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
   color: #4b5862;
@@ -341,6 +438,106 @@ section.secondSection .section-description {
 
 section.thirdSection picture img {
   margin: unset;
+}
+
+@media (min-width: 50em) {
+  section {
+    padding-top: 10rem;
+    overflow: visible;
+  }
+  section h2 {
+    margin-bottom: 4.375rem;
+  }
+  section h3 {
+    margin-top: 5.25rem;
+  }
+  section .section-body {
+    text-align: left;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 7.68rem;
+            column-gap: 7.68rem;
+    padding-left: 0;
+  }
+  section .section-description {
+    margin-top: 2.188rem;
+    max-width: 32.5rem;
+  }
+  section.firstSection {
+    padding-right: 0;
+  }
+  section.firstSection picture {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  section.firstSection picture img {
+    margin: 0;
+    -webkit-transform: scale(1.4) translate(100px, -10px);
+            transform: scale(1.4) translate(100px, -10px);
+  }
+  section.secondSection {
+    position: relative;
+    margin-top: 10vw;
+    margin-bottom: 3vw;
+    padding-top: unset;
+    padding-bottom: unset;
+    padding: 7.9vw 12.5vw;
+    background: url(../images/bg-pattern-circles.svg) no-repeat -16vw -37.5vw/75%, -webkit-gradient(linear, left top, left bottom, from(#2c2d3f), to(#3f4164)) no-repeat 0 0/auto;
+    background: url(../images/bg-pattern-circles.svg) no-repeat -16vw -37.5vw/75%, linear-gradient(#2c2d3f, #3f4164) no-repeat 0 0/auto;
+  }
+  section.secondSection .section-body {
+    -webkit-column-gap: 96px;
+            column-gap: 96px;
+    -ms-grid-columns: 1fr 36vw;
+        grid-template-columns: 1fr 36vw;
+  }
+  section.secondSection picture {
+    top: -3.47vw;
+    left: 11vw;
+    bottom: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  section.secondSection picture img {
+    display: block;
+    margin-top: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    width: 34.7vw;
+  }
+  section.secondSection .section-text {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1/ 2/ 2/ 3;
+  }
+  section.secondSection h3 {
+    font-size: 2.2rem;
+  }
+  section.thirdSection {
+    padding-left: 0;
+  }
+  section.thirdSection picture {
+    -webkit-box-ordinal-group: unset;
+        -ms-flex-order: unset;
+            order: unset;
+  }
+  section.thirdSection picture img {
+    margin: 0;
+    -webkit-transform: scale(1.45) translate(-75px, 20px);
+            transform: scale(1.45) translate(-75px, 20px);
+  }
 }
 
 footer {
@@ -397,6 +594,37 @@ footer .footerSubLinkItem a:hover {
   font-weight: 500;
 }
 
+@media (min-width: 50em) {
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+    padding: 5rem 0;
+    padding-left: 10rem;
+    margin-top: 15rem;
+  }
+  footer .footerLink {
+    width: 100%;
+    margin-top: unset;
+  }
+  footer .footerLink > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  footer .footerLinkItem:not(:first-of-type) {
+    margin-top: unset;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -416,9 +644,15 @@ html {
 body {
   font-family: 'Overpass', sans-serif;
   font-family: 'Ubuntu', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
 }
 
-a {
+a,
+a:visited,
+a:hover,
+a:active {
+  color: unset;
   text-decoration: none;
   cursor: pointer;
 }
@@ -429,11 +663,13 @@ ul {
 
 img {
   width: 100%;
+  pointer-events: none;
 }
 
 h1,
 h2,
 h3 {
   color: #1f3f5b;
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */
