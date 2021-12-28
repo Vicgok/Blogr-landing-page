@@ -545,6 +545,7 @@ section.thirdSection picture img {
 }
 
 footer {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -598,6 +599,21 @@ footer .footerSubLinkItem a:hover {
   font-weight: 500;
 }
 
+footer .attribution {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  padding: 0 2rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #c8c8cb;
+}
+
+footer .attribution a {
+  font-weight: 700;
+}
+
 @media (min-width: 50em) {
   footer {
     -webkit-box-orient: horizontal;
@@ -649,6 +665,7 @@ body {
   font-family: 'Overpass', sans-serif;
   font-family: 'Ubuntu', sans-serif;
   -webkit-tap-highlight-color: transparent;
+  width: 100%;
   overflow-x: hidden;
 }
 

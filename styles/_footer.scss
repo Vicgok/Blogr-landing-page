@@ -1,4 +1,5 @@
 footer {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,6 +40,21 @@ footer {
     a:hover {
       font-weight: 500;
     }
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    padding: 0 2rem;
+    // margin-top: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    color: $footer-text;
+  }
+  .attribution a {
+    font-weight: 700;
   }
 }
 
