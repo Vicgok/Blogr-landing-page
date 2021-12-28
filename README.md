@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/blogr-responsive-landing-page-using-scss-d-tAudQ4O)
 - Live Site URL: [Live site](https://vicgok.github.io/Blogr-landing-page/base.html)
 
 ## My process
