@@ -2,6 +2,7 @@ section {
   display: flex;
   flex-direction: column;
 
+  width: 100vw;
   text-align: center;
 
   padding: 0 10vw;
@@ -88,8 +89,8 @@ section {
 @media (min-width: 50em) {
   section {
     padding-top: 10rem;
-
-    overflow: visible;
+    padding-bottom: 10rem;
+    // overflow: visible;
     h2 {
       margin-bottom: 4.375rem;
     }
@@ -111,6 +112,7 @@ section {
     }
     &.firstSection {
       padding-right: 0;
+
       picture {
         order: 2;
 

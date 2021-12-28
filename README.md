@@ -24,13 +24,14 @@ Users should be able to:
 ### Screenshot
 
 ![Solution Screenshot](/images/desktop.png)
-![Solution Screenshot](/images/mobileActive.png)
+![Solution Screenshot](/images/desktop-active.png)
 ![Solution Screenshot](/images/mobile.png)
+![Solution Screenshot](/images/mobile-active.png)
 
 ### Links
 
-- Solution URL: [Solution](https://www.frontendmentor.io/solutions/sunnyside-agency-landing-page-made-using-scss-DSvHKuvc7)
-- Live Site URL: [Live site](https://vicgok.github.io/Sunnyside_agency_landing_page/base.html)
+- Solution URL: [Solution]()
+- Live Site URL: [Live site](https://vicgok.github.io/Blogr-landing-page/base.html)
 
 ## My process
 

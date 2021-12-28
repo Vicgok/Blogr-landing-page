@@ -362,6 +362,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100vw;
   text-align: center;
   padding: 0 10vw;
   padding-top: 6.234rem;
@@ -447,7 +448,7 @@ section.thirdSection picture img {
 @media (min-width: 50em) {
   section {
     padding-top: 10rem;
-    overflow: visible;
+    padding-bottom: 10rem;
   }
   section h2 {
     margin-bottom: 4.375rem;
