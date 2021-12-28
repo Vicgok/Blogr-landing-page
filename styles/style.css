@@ -345,6 +345,10 @@ nav .navlinkswrapper.open {
   nav .navlinkswrapper .ctanavbtn a:last-of-type:hover {
     color: white;
   }
+  nav .navlinkswrapper.open {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
   .header-content p {
     font-size: 1.35rem;
   }
