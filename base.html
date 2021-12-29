@@ -14,7 +14,7 @@
     <title>Frontend Mentor | [Blogr]</title>
   </head>
   <body>
-    <header role="banner">
+    <header>
       <nav>
         <div class="logoholder">
           <img src="images/logo.svg" alt="logo" />
@@ -84,88 +84,94 @@
         </div>
       </div>
     </header>
+    <main>
+      <section class="firstSection">
+        <h2>Designed for the future</h2>
+        <div class="section-body">
+          <picture>
+            <source
+              media="(min-width: 50em)"
+              srcset="images/illustration-editor-desktop.svg"
+            />
+            <img
+              src="images/illustration-editor-mobile.svg"
+              alt="editorMobile"
+            />
+          </picture>
+          <div class="section-text">
+            <h3>Introducing an extensible editor</h3>
+            <p class="section-description">
+              Blogr features an exceedingly intuitive interface which lets you
+              focus on one thing: creating content. The editor supports
+              management of multiple blogs and allows easy manipulation of
+              embeds such as images, videos, and Markdown. Extensibility with
+              plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.
+            </p>
 
-    <section class="firstSection" role="main">
-      <h2>Designed for the future</h2>
-      <div class="section-body">
-        <picture>
-          <source
-            media="(min-width: 50em)"
-            srcset="images/illustration-editor-desktop.svg"
-          />
-          <img src="images/illustration-editor-mobile.svg" alt="editorMobile" />
-        </picture>
-        <div class="section-text">
-          <h3>Introducing an extensible editor</h3>
-          <p class="section-description">
-            Blogr features an exceedingly intuitive interface which lets you
-            focus on one thing: creating content. The editor supports management
-            of multiple blogs and allows easy manipulation of embeds such as
-            images, videos, and Markdown. Extensibility with plugins and themes
-            provide easy ways to add functionality or change the looks of a
-            blog.
-          </p>
-
-          <h3>Robust content management</h3>
-          <p class="section-description">
-            Flexible content management enables users to easily move through
-            posts. Increase the usability of your blog by adding customized
-            categories, sections, format, or flow. With this functionality,
-            you’re in full control.
-          </p>
+            <h3>Robust content management</h3>
+            <p class="section-description">
+              Flexible content management enables users to easily move through
+              posts. Increase the usability of your blog by adding customized
+              categories, sections, format, or flow. With this functionality,
+              you’re in full control.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="secondSection" role="main">
-      <div class="section-body">
-        <picture>
-          <img src="images/illustration-phones.svg" alt="editorMobile" />
-        </picture>
-        <div class="section-text">
-          <h3>State of the Art Infrastructure</h3>
+      <section class="secondSection">
+        <div class="section-body">
+          <picture>
+            <img src="images/illustration-phones.svg" alt="editorMobile" />
+          </picture>
+          <div class="section-text">
+            <h3>State of the Art Infrastructure</h3>
 
-          <p class="section-description">
-            With reliability and speed in mind, worldwide data centers provide
-            the backbone for ultra-fast connectivity. This ensures your site
-            will load instantly, no matter where your readers are, keeping your
-            site competitive.
-          </p>
+            <p class="section-description">
+              With reliability and speed in mind, worldwide data centers provide
+              the backbone for ultra-fast connectivity. This ensures your site
+              will load instantly, no matter where your readers are, keeping
+              your site competitive.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="thirdSection" role="main">
-      <div class="section-body">
-        <picture>
-          <source
-            media="(min-width: 50em)"
-            srcset="images/illustration-laptop-desktop.svg"
-          />
-          <img src="images/illustration-laptop-mobile.svg" alt="editorMobile" />
-        </picture>
-        <div class="section-text">
-          <h3>Free, open, simple</h3>
-          <p class="section-description">
-            Blogr is a free and open source application backed by a large
-            community of helpful developers. It supports features such as code
-            syntax highlighting, RSS feeds, social media integration,
-            third-party commenting tools, and works seamlessly with Google
-            Analytics. The architecture is clean and is relatively easy to
-            learn.
-          </p>
+      <section class="thirdSection">
+        <div class="section-body">
+          <picture>
+            <source
+              media="(min-width: 50em)"
+              srcset="images/illustration-laptop-desktop.svg"
+            />
+            <img
+              src="images/illustration-laptop-mobile.svg"
+              alt="editorMobile"
+            />
+          </picture>
+          <div class="section-text">
+            <h3>Free, open, simple</h3>
+            <p class="section-description">
+              Blogr is a free and open source application backed by a large
+              community of helpful developers. It supports features such as code
+              syntax highlighting, RSS feeds, social media integration,
+              third-party commenting tools, and works seamlessly with Google
+              Analytics. The architecture is clean and is relatively easy to
+              learn.
+            </p>
 
-          <h3>Powerful tooling</h3>
-          <p class="section-description">
-            Batteries included. We built a simple and straightforward CLI tool
-            that makes customization and deployment a breeze, but capable of
-            producing even the most complicated sites.
-          </p>
+            <h3>Powerful tooling</h3>
+            <p class="section-description">
+              Batteries included. We built a simple and straightforward CLI tool
+              that makes customization and deployment a breeze, but capable of
+              producing even the most complicated sites.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <footer role="contentinfo">
+      </section>
+    </main>
+    <footer>
       <div class="logoholder">
         <img src="images/logo.svg" alt="logo" />
       </div>
