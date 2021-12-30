@@ -4,8 +4,8 @@ const navMenu = document.querySelector('.navlinkswrapper')
 const navLinks = document.querySelectorAll('.navlinkitem > a')
 
 const accordian = (elementArray, closestClass) => {
-  elementArray.forEach((link) => {
-    link.addEventListener('click', (e) => {
+  elementArray.forEach(link => {
+    link.addEventListener('click', e => {
       const clickedLink = e.target.closest(closestClass)
       clickedLink.classList.contains('open')
         ? clickedLink.classList.remove('open')
@@ -14,7 +14,7 @@ const accordian = (elementArray, closestClass) => {
   })
 
   const resetAccordian = () => {
-    navLinks.forEach((link) => {
+    navLinks.forEach(link => {
       const allNavLinks = link.closest(closestClass)
       if (allNavLinks.classList.contains('open'))
         allNavLinks.classList.remove('open')
